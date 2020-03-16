@@ -1,7 +1,7 @@
 export const RECEIVE_MEMES = 'RECEIVE_MEMES';
 
 function receiveMemes(json) {
-    const {memes} = json.data;
+    const { memes } = json.data;
     return {
         type: RECEIVE_MEMES,
         memes
@@ -10,7 +10,7 @@ function receiveMemes(json) {
 
 function fetchMemesJson() {
     return fetch('https://api.imgflip.com/get_memes')
-            .then(response=>response.json)
+            .then(response => response.json())
 }
 
 export function fetchMemes() {
